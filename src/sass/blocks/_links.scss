@@ -1,0 +1,43 @@
+.links {
+	position: relative;
+    height: 1100px; 
+    &__divider {
+		position: absolute;
+        background-color: $third-color;
+        height: 300px;
+        width: 600px;
+		transform: translate(0px, 120%);
+        opacity: 0;
+        transition: all 0.5s ease 0s;
+    	&_title {
+			font-weight: 900;
+            color: $main-color;
+            font-size: 40px;
+            margin: 170px 0 20px 15px;
+		}	
+        &_subtitle {
+			font-weight: 700;
+            color: $main-color;
+            font-size: 20px;
+            margin-left: 15px;
+		} 
+        &_1 {
+			top: 4%;
+            right: 37%;
+		} 
+        &_2 {
+			top: calc( 36% + 8px );
+            left: 37%;
+		}
+        &_3 {
+			bottom: 3%;
+			right: 37%;
+		}
+	}
+}
+.vertical_divider {
+	margin: 0 auto;
+    height: 1100px;
+    width: 1px;
+    border-right: 1px solid black; 
+}

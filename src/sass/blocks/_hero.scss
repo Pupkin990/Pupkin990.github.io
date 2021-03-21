@@ -1,0 +1,180 @@
+
+.main__wrapper {
+	position: relative;
+	width: 100%;
+	height: 700px;
+	overflow: hidden;
+	background: $second-color;
+}
+
+.box div {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-color: transparent;
+	border: 6px solid rgba(225, 225, 225, 0.8);
+}
+
+.box div:nth-child(1){
+	top: 12%;
+	left: 42%;
+	animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2){
+	top: 27%;
+	left: 50%;
+	animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3){
+	top: 15%;
+	left: 13%;
+	animation: animate 5s linear infinite;
+}
+
+.box div:nth-child(4){
+	top: 53%;
+	left: 36%;
+	animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(5){
+	top: 12%;
+	left: 42%;
+	animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6){
+	top: 70%;
+	left: 20%;
+	animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(7){
+	top: 12%;
+	left: 70%;
+	animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(8){
+	top: 35%;
+	left: 62%;
+	animation: animate 3s linear infinite;
+}
+
+.box div:nth-child(9){
+	top: 80%;
+	left: 80%;
+	animation: animate 4s linear infinite;
+}
+
+.box div:nth-child(10){
+	top: 90%;
+	left: 69%;
+	animation: animate 6s linear infinite;
+}
+
+
+@keyframes animate{
+	0%{
+		transform: scale(0) translateY(0) rotate(0);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(1.3) translateY(-90px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+.main__text {
+	margin-top: 150px;
+
+}
+
+h1 {
+
+  font-weight: 900;
+  color: $main-color;
+}
+.info {
+  margin: 20px 0;
+  text-align: center;
+}
+
+p {
+	font-weight: 700;
+  color: $main-color;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.block-effect {
+  font-size: calc(8px + 6vw);
+}
+
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+
+  color: $main-color;
+  padding: 4px;
+
+  position: relative;
+  overflow: hidden;
+
+  animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-reveal::after {
+  content: '';
+
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+
+
+@keyframes revealBlock {
+  100% {
+    color: $main-color;
+  }
+}
+
+@keyframes revealingIn {
+
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes revealingOut {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: $third-color;
+  font-size: 16px;
+}
+
