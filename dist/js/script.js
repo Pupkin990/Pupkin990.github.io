@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
     });
     
-    /* window.addEventListener("scroll", div1);
+    window.addEventListener("scroll", div1);
 
     function div1() {
         if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
@@ -59,7 +59,9 @@ window.addEventListener('DOMContentLoaded', function() {
         if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
             document.querySelector(".links__divider_3").style.display = 'block';
         } 
-    } */
+    }
+
 
     
+
 });

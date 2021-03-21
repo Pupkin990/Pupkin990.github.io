@@ -2,18 +2,53 @@
 	position: relative;
     height: 1100px; 
     &__divider {
+        display: none;
 		position: absolute;
-        background-color: $third-color;
+        background-color: $second-color;
+        opacity: 0.5;
         height: 300px;
         width: 600px;
-		transform: translate(0px, 120%);
-        opacity: 0;
-        transition: all 0.5s ease 0s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+        cursor: pointer;
+        &:hover{
+            background-color: $third-color;
+            transition: all 1s;
+            transform: scale(1.1);
+            opacity: 1;
+            
+        }
+        @keyframes fade {
+            from {
+                transform: translateX(50%);
+            }
+            to {
+                transform: translateX(0%);
+            }
+        }
+        &_number{
+            top: -25%;
+            right: 0%;
+            position: absolute;
+            font-weight: 900;
+            font-size: 120px;
+            color:$main-color;
+            animation: animNumber 5s
+        }
+        @keyframes animNumber{
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }    
+        }
     	&_title {
 			font-weight: 900;
             color: $main-color;
             font-size: 40px;
             margin: 170px 0 20px 15px;
+            
 		}	
         &_subtitle {
 			font-weight: 700;
@@ -28,7 +63,17 @@
         &_2 {
 			top: calc( 36% + 8px );
             left: 37%;
-		}
+            animation-name: fade-2;
+            animation-duration: 1.5s;
+            @keyframes fade-2 {
+                from {
+                    transform: translateX(-50%);
+                } 
+                to {
+                    transform: translateX(0%);
+                }
+            }
+        }
         &_3 {
 			bottom: 3%;
 			right: 37%;
@@ -40,4 +85,25 @@
     height: 1100px;
     width: 1px;
     border-right: 1px solid black; 
+}
+
+.effect{
+    background-color:rgba(119, 23, 41, 1.00);
+    box-shadow: 0 0 15px rgba(119, 23, 41, 1.00),
+                0 0 30px rgba(119, 23, 41, 1.00),
+                0 0 45px rgba(119, 23, 41, 1.00),
+                0 0 90px rgba(119, 23, 41, 1.00);
+                transition: all 2s;
+                border-radius: 5%;
+    &:hover{
+        box-shadow: 0 0 30px rgba(119, 23, 41, 1.00),
+                    0 0 60px rgba(119, 23, 41, 1.00),
+                    0 0 80px rgba(119, 23, 41, 1.00),
+                    0 0 100px rgba(119, 23, 41, 1.00),
+                    0 0 120px rgba(119, 23, 41, 1.00),
+                    0 0 140px rgba(119, 23, 41, 1.00),
+                    0 0 160px rgba(119, 23, 41, 1.00);
+
+    }
+
 }
