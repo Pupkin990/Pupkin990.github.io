@@ -11,6 +11,7 @@
         animation-name: fade;
         animation-duration: 1.5s;
         cursor: pointer;
+        text-decoration: none;
         &:hover{
             background-color: $third-color;
             transition: all 1s;
@@ -48,6 +49,7 @@
             color: $main-color;
             font-size: 40px;
             margin: 170px 0 20px 15px;
+            animation: animNumber 5s;
             
 		}	
         &_subtitle {
@@ -55,6 +57,7 @@
             color: $main-color;
             font-size: 20px;
             margin-left: 15px;
+            animation: animNumber 5s;
 		} 
         &_1 {
 			top: 4%;
@@ -79,12 +82,6 @@
 			right: 37%;
 		}
 	}
-}
-.vertical_divider {
-	margin: 0 auto;
-    height: 1100px;
-    width: 1px;
-    border-right: 1px solid black; 
 }
 
 .effect{
