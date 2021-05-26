@@ -1,10 +1,12 @@
 .dodatok
+    
     background-color: $second-color
     position: relative
     padding: 0
     margin: 0
-    min-height: 2000px
+    min-height: 550px
     &_title
+        transition: 0.5s all
         text-align: center
         padding-top: 40px
         color: $main-color
@@ -12,25 +14,17 @@
         font-size: 40px
     &_subtitle
         color: $main-color
-        font-weight: 700
+        font-weight: 900
         font-size: 35px
         text-align: center
-        padding-top: 40px
+        padding-top: 30px
     &__div1
-        display: flex
-        justify-content: center
-        align-items: center
-        &_img
-            padding: 100px
-            width: 200px
-            height: 200px
-        &_descr
-            display: block
-            line-height: 1.4em
-            width: 300px
-            color: $main-color
-            font-weight: 700
-        
+        line-height: 1.7em
+        color: $main-color
+        font-weight: 700
+        font-size: 20px
+        text-align: center
+        padding-top: 20px
         //ЗАЧЕМ НУЖНО ПРИЛОЖЕНИЕ?
     &__div2
         display: block
@@ -40,10 +34,28 @@
             padding-top: 40px
             color: $main-color
             font-weight: 900
-            font-size: 40px
-        &_descr
-            display: block
-            line-height: 1.4em
-            width: 300px
+            font-size: 30px
+        &_wrapper
+            display: flex
+            justify-content: space-evenly   
+            align-items: center
+        &_creator
             color: $main-color
+            font-size: 20px
             font-weight: 700
+            padding-top: 30px
+    &__div3
+        position: relative
+        &_title
+            text-align: center
+            padding-top: 40px
+            color: $main-color
+            font-weight: 900
+            font-size: 30px
+        &_descr
+            color: $main-color
+            font-size: 20px
+            font-weight: 700
+            padding-top: 30px
+            text-align: center
+            

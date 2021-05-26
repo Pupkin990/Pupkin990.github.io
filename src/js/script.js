@@ -1,5 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
 
+    /* tabs */
+
 	let tabs = document.querySelectorAll('.names'),
 		tabsContent = document.querySelectorAll('.tabcontent'),
 		tabsParent = document.querySelector('.persons__wrapper');
@@ -36,6 +38,14 @@ window.addEventListener('DOMContentLoaded', function() {
             });
 		}
     });
+
+
+
+    
+
+
+   
+
     
     window.addEventListener("scroll", div1);
 
@@ -61,5 +71,38 @@ window.addEventListener('DOMContentLoaded', function() {
         } 
     }
 
+    window.addEventListener("scroll", div4);
+
+    function div4() {
+        if (document.body.scrollTop > 1400 || document.documentElement.scrollTop > 1400) {
+            document.querySelector(".links__divider_4").style.display = 'block';
+        } 
+    }
+
+
+    window.addEventListener("scroll", div5);
+
+    function div5() {
+        if (document.body.scrollTop > 1700 || document.documentElement.scrollTop > 1700) {
+            document.querySelector(".links__divider_5").style.display = 'block';
+        } 
+    }
+
+    window.addEventListener("scroll", div6);
+
+    function div6() {
+        if (document.body.scrollTop > 1900 || document.documentElement.scrollTop > 1900) {
+            document.querySelector(".links__divider_6").style.display = 'block';
+        } 
+    }
+
+
+
+
+
+
+    /* practice */
+
+    
 
 });
